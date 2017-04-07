@@ -4,8 +4,14 @@
   "private": true,
   "homepage": "https://homes-minecraftservermod.github.io/",
   "dependencies": {
+    "elemental": "^0.6.1",
+    "material-ui": "^0.17.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-bootstrap": "^0.30.8",
+    "react-css-themr": "^2.0.0",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-toolbox": "^2.0.0-beta.8"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",

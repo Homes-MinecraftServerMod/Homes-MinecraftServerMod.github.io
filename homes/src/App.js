@@ -1,21 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 import {Navbar, Nav, NavItem} from "react-bootstrap";
+import Command from "./command/Command"
 
-const App = React.createClass({
-
-    getInitialState() {
-        return { showModal: false };
-    },
-
-    close() {
-        this.setState({ showModal: false });
-    },
-
-    open() {
-        this.setState({ showModal: true });
-    },
+class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            page: (<h1>Homes</h1>),
+        };
+    }
 
     render() {
         return (
@@ -23,25 +18,29 @@ const App = React.createClass({
                 <Navbar inverse collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="">Homes</a>
+                            <a onClick={() => {
+                                this.setState({page: (<h1>Homes</h1>)})
+                            }}>Homes</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav>
-                            <NavItem eventKey={1}>Command</NavItem>
-                            <NavItem eventKey={2}>Permission</NavItem>
+                            <NavItem onClick={() => {
+                                this.setState({page: (<Command />)})
+                            }}>Command</NavItem>
+                            <NavItem onClick={() => {
+                                this.setState({page: (<h1>Permission</h1>)})
+                            }}>Permission</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
                 <div id="main">
-                    <p className="App-intro">
-                        To get started, edit <code>src/App.js</code> and save to reload.
-                    </p>
+                    {this.state.page}
                 </div>
             </div>
         );
     }
-});
+}
 
 export default App;

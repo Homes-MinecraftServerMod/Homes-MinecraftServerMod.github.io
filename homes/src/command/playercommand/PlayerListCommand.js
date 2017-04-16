@@ -26,40 +26,36 @@ export const PlayerListCommand = React.createClass({
                             <Row className="show-grid"><Col md={12}><p>
                                 You can display the list of your homes.<br/>
                             </p></Col></Row>
-                            <Row className="show-grid">
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Permission" bsStyle="info"/>
-                                        <ListGroupItem>homes.command.list</ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Configuration" bsStyle="info"/>
-                                    </ListGroup>
-                                </Col>
-                            </Row>
+                            <Row className="show-grid"><Col sm={5}>
+                                <ListGroup>
+                                    <ListGroupItem header="Permission" bsStyle="info"/>
+                                    <ListGroupItem>homes.command.list</ListGroupItem>
+                                </ListGroup>
+                            </Col></Row>
+                            <Row className="show-grid"><Col sm={5}>
+                                <ListGroup>
+                                    <ListGroupItem header="Configuration" bsStyle="info"/>
+                                </ListGroup>
+                            </Col></Row>
                         </Grid></Panel>
 
                         <Panel header="/home list <player_name>" eventKey="2" bsStyle="success"><Grid>
                             <Row className="show-grid"><Col md={12}><p>
                                 You can display the list of player's homes.<br/>
                             </p></Col></Row>
-                            <Row className="show-grid">
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Permission" bsStyle="info"/>
-                                        <ListGroupItem>homes.command.list</ListGroupItem>
-                                        <ListGroupItem>homes.command.list.player</ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Configuration" bsStyle="info"/>
-                                        <ListGroupItem>Allow using player home</ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                            </Row>
+                            <Row className="show-grid"><Col sm={5}>
+                                <ListGroup>
+                                    <ListGroupItem header="Permission" bsStyle="info"/>
+                                    <ListGroupItem>homes.command.list</ListGroupItem>
+                                    <ListGroupItem>homes.command.list.player</ListGroupItem>
+                                </ListGroup>
+                            </Col></Row>
+                            <Row className="show-grid"><Col sm={5}>
+                                <ListGroup>
+                                    <ListGroupItem header="Configuration" bsStyle="info"/>
+                                    <ListGroupItem>Allow using player home</ListGroupItem>
+                                </ListGroup>
+                            </Col></Row>
                         </Grid></Panel>
                     </Accordion>
 

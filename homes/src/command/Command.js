@@ -19,7 +19,7 @@ export const Command = React.createClass({
                 <Grid>
                     <PageHeader>Command</PageHeader>
                     <Row className="show-grid">
-                        <Col lg={6}>
+                        <Col md={6}>
                             <ListGroup>
                                 <ListGroupItem header="Player" id="list-header"/>
                                 <ListGroupItem href="#" onClick={() => {
@@ -34,7 +34,7 @@ export const Command = React.createClass({
                                 <ListGroupItem>Reload Command</ListGroupItem>
                             </ListGroup>
                         </Col>
-                        <Col lg={6}>
+                        <Col md={6}>
                             <ListGroup>
                                 <ListGroupItem header="Console" id="list-header"/>
                                 <ListGroupItem>List Command</ListGroupItem>

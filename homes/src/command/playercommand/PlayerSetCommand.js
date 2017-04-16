@@ -23,50 +23,34 @@ export const PlayerSetCommand = React.createClass({
                     <Accordion>
 
                         <Panel header="/home set" eventKey="1" bsStyle="success">
-                            <Grid>
-                                <Row className="show-grid"><Col md={12}><p>
-                                    You can set your location to your default home.<br/>
-                                </p></Col></Row>
-                                <Row className="show-grid">
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Permission" bsStyle="info"/>
-                                            <ListGroupItem>homes.command.set</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Configuration" bsStyle="info"/>
-                                        </ListGroup>
-                                    </Col>
-                                </Row>
-                            </Grid>
+                            <p>
+                                You can set your location to your default home.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.set</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                            </ListGroup>
                         </Panel>
 
                         <Panel header="/home set <home_name>" eventKey="2" bsStyle="success">
-                            <Grid>
-                                <Row className="show-grid"><Col md={12}><p>
-                                    You can set your location to your named home.<br/>
-                                    If you want to update your named home location, execute the same command again.<br/>
-                                    Also, the administrator can limit the number of named homes that can be set.<br/>
-                                    In that case, you can not set more than the restricted number of named homes.<br/>
-                                </p></Col></Row>
-                                <Row className="show-grid">
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Permission" bsStyle="info"/>
-                                            <ListGroupItem>homes.command.set</ListGroupItem>
-                                            <ListGroupItem>homes.command.set.name</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Configuration" bsStyle="info"/>
-                                            <ListGroupItem>Allow using named home</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                </Row>
-                            </Grid>
+                            <p>
+                                You can set your location to your named home. If you want to update your named home
+                                location, execute the same command again. Also, the administrator can limit the
+                                number of named homes that can be set. In that case, you can not set more than the
+                                restricted number of named homes.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.set</ListGroupItem>
+                                <ListGroupItem>homes.command.set.name</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow using named home</ListGroupItem>
+                            </ListGroup>
                         </Panel>
                     </Accordion>
 

@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import './App.css';
 
 import {Navbar, Nav, NavItem} from "react-bootstrap";
-import Command from "./command/Command"
+import Command from "./command/Command";
+import Homes from "./Homes";
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            page: (<h1>Homes</h1>),
+            page: (<Homes />),
         };
     }
 
@@ -19,7 +20,7 @@ class App extends Component {
                     <Navbar.Header>
                         <Navbar.Brand>
                             <a onClick={() => {
-                                this.setState({page: (<h1>Homes</h1>)})
+                                this.setState({page: (<Homes />)})
                             }}>Homes</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />

@@ -1,11 +1,10 @@
-/**
- * Created by masahiro on 2017/04/07.
- */
-import React from 'react';
-import {Grid, Row, Col, Panel, PanelGroup} from 'react-bootstrap';
+import React from "react";
+import {Grid, Row, Col, Panel, PanelGroup} from "react-bootstrap";
 import PlayerHomeCommand from "./playercommand/PlayerHomeCommand";
 import PlayerSetCommand from "./playercommand/PlayerSetCommand";
 import PlayerDeleteCommand from "./playercommand/PlayerDeleteCommand";
+import PlayerListCommand from "./playercommand/PlayerListCommand";
+import PlayerPrivateCommand from "./playercommand/PlayerPrivateCommand";
 
 export const Command = React.createClass({
     getInitialState() {
@@ -28,10 +27,10 @@ export const Command = React.createClass({
                     this.setState({overlay: <PlayerDeleteCommand command={this}/>});
                 }}/>
                 <Panel header="List Command" bsStyle="info" onClick={() => {
-
+                    this.setState({overlay: <PlayerListCommand command={this}/>});
                 }}/>
                 <Panel header="Private Command" bsStyle="info" onClick={() => {
-
+                    this.setState({overlay: <PlayerPrivateCommand command={this}/>});
                 }}/>
                 <Panel header="Invite Command" bsStyle="info" onClick={() => {
 

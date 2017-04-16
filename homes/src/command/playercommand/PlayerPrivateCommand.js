@@ -19,48 +19,42 @@ export const PlayerPrivateCommand = React.createClass({
                     <Modal.Title>Private Command</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>When you set your home with set command, your home is public. So other players can teleport to
+                    <p>
+                        When you set your home with set command, your home is public. So other players can teleport to
                         your home. However, by using this command, you can make your home private. Then, other players
-                        can not check your home with list command and can not teleport.</p>
+                        can not check your home with list command and can not teleport.
+                    </p>
                     <Accordion>
 
-                        <Panel header="/home private (on/off)" eventKey="1" bsStyle="success"><Grid>
-                            <Row className="show-grid"><Col md={12}><p>
-                                You can display the list of your homes.<br/>
-                            </p></Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Permission" bsStyle="info"/>
-                                    <ListGroupItem>homes.command.private</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Configuration" bsStyle="info"/>
-                                    <ListGroupItem>Allow setting home private</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                        </Grid></Panel>
+                        <Panel header="/home private (on/off)" eventKey="1" bsStyle="success">
+                            <p>
+                                You can display the list of your homes.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.private</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow setting home private</ListGroupItem>
+                            </ListGroup>
+                        </Panel>
 
-                        <Panel header="/home private (on/off) <home_name> " eventKey="2" bsStyle="success"><Grid>
-                            <Row className="show-grid"><Col md={12}><p>
-                                You can display the list of player's homes.<br/>
-                            </p></Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Permission" bsStyle="info"/>
-                                    <ListGroupItem>homes.command.private</ListGroupItem>
-                                    <ListGroupItem>homes.command.private.name</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Configuration" bsStyle="info"/>
-                                    <ListGroupItem>Allow setting home private</ListGroupItem>
-                                    <ListGroupItem>Allow using named home</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                        </Grid></Panel>
+                        <Panel header="/home private (on/off) <home_name> " eventKey="2" bsStyle="success">
+                            <p>
+                                You can display the list of player's homes.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.private</ListGroupItem>
+                                <ListGroupItem>homes.command.private.name</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow setting home private</ListGroupItem>
+                                <ListGroupItem>Allow using named home</ListGroupItem>
+                            </ListGroup>
+                        </Panel>
                     </Accordion>
 
                     <Panel header="Examples" bsStyle="warning">

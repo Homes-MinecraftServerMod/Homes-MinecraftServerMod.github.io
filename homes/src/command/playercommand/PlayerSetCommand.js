@@ -1,6 +1,3 @@
-/**
- * Created by masahiro on 2017/04/16.
- */
 import React from 'react';
 import {Modal, Panel, Accordion, Well, Grid, Row, Col, ListGroup, ListGroupItem} from "react-bootstrap";
 

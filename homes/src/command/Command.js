@@ -5,6 +5,7 @@ import React from 'react';
 import {Grid, Row, Col, Panel, PanelGroup} from 'react-bootstrap';
 import PlayerHomeCommand from "./playercommand/PlayerHomeCommand";
 import PlayerSetCommand from "./playercommand/PlayerSetCommand";
+import PlayerDeleteCommand from "./playercommand/PlayerDeleteCommand";
 
 export const Command = React.createClass({
     getInitialState() {
@@ -24,7 +25,7 @@ export const Command = React.createClass({
                     this.setState({overlay: <PlayerSetCommand command={this}/>});
                 }}/>
                 <Panel header="Delete Command" bsStyle="info" onClick={() => {
-
+                    this.setState({overlay: <PlayerDeleteCommand command={this}/>});
                 }}/>
                 <Panel header="List Command" bsStyle="info" onClick={() => {
 

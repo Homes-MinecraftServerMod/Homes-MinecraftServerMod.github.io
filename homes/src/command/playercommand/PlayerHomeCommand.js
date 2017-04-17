@@ -1,8 +1,5 @@
-/**
- * Created by masahiro on 2017/04/07.
- */
 import React from 'react';
-import {Modal, Panel, Accordion, Well, Grid, Row, Col, ListGroup, ListGroupItem} from "react-bootstrap";
+import {Modal, Panel, Accordion, Well, ListGroup, ListGroupItem} from "react-bootstrap";
 
 export const PlayerHomeCommand = React.createClass({
     getInitialState() {
@@ -26,94 +23,62 @@ export const PlayerHomeCommand = React.createClass({
                     <Accordion>
 
                         <Panel header="/home" eventKey="1" bsStyle="success">
-                            <Grid>
-                                <Row className="show-grid"><Col md={12}><p>
-                                    Teleport to your set default home.<br/>
-                                </p></Col></Row>
-                                <Row className="show-grid">
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Permission" bsStyle="info"/>
-                                            <ListGroupItem>homes.command</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Configuration" bsStyle="info"/>
-                                        </ListGroup>
-                                    </Col>
-                                </Row>
-                            </Grid>
+                            <p>
+                                Teleport to your set default home.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                            </ListGroup>
                         </Panel>
 
                         <Panel header="/home <home_name>" eventKey="2" bsStyle="success">
-                            <Grid>
-                                <Row className="show-grid"><Col md={12}><p>
-                                    Teleport to your set named home.<br/>
-                                </p></Col></Row>
-                                <Row className="show-grid">
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Permission" bsStyle="info"/>
-                                            <ListGroupItem>homes.command</ListGroupItem>
-                                            <ListGroupItem>homes.command.name</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Configuration" bsStyle="info"/>
-                                            <ListGroupItem>Allow using named home</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                </Row>
-                            </Grid>
+                            <p>
+                                Teleport to your set named home
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command</ListGroupItem>
+                                <ListGroupItem>homes.command.name</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow using named home</ListGroupItem>
+                            </ListGroup>
                         </Panel>
 
                         <Panel header="/home -p <player_name>" eventKey="3" bsStyle="success">
-                            <Grid>
-                                <Row className="show-grid"><Col md={12}><p>
-                                    Teleport to player's set default home.<br/>
-                                </p></Col></Row>
-                                <Row className="show-grid">
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Permission" bsStyle="info"/>
-                                            <ListGroupItem>homes.command</ListGroupItem>
-                                            <ListGroupItem>homes.command.player</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Configuration" bsStyle="info"/>
-                                            <ListGroupItem>Allow using player home</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                </Row>
-                            </Grid>
+                            <p>
+                                Teleport to player's set default home.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command</ListGroupItem>
+                                <ListGroupItem>homes.command.player</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow using player home</ListGroupItem>
+                            </ListGroup>
                         </Panel>
 
                         <Panel header="/home <home_name> -p <player_name>" eventKey="4" bsStyle="success">
-                            <Grid>
-                                <Row className="show-grid"><Col md={12}><p>
-                                    Teleport to player's set named home.<br/>
-                                </p></Col></Row>
-                                <Row className="show-grid">
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Permission" bsStyle="info"/>
-                                            <ListGroupItem>homes.command</ListGroupItem>
-                                            <ListGroupItem>homes.command.player.name</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                    <Col sm={4}>
-                                        <ListGroup>
-                                            <ListGroupItem header="Configuration" bsStyle="info"/>
-                                            <ListGroupItem>Allow using named home</ListGroupItem>
-                                            <ListGroupItem>Allow using player home</ListGroupItem>
-                                        </ListGroup>
-                                    </Col>
-                                </Row>
-                            </Grid>
+                            <p>
+                                Teleport to player's set named home.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command</ListGroupItem>
+                                <ListGroupItem>homes.command.player.name</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow using named home</ListGroupItem>
+                                <ListGroupItem>Allow using player home</ListGroupItem>
+                            </ListGroup>
                         </Panel>
                     </Accordion>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid, Row, Col, Panel, PanelGroup} from "react-bootstrap";
+import {Grid, Row, Col, Panel, Button} from "react-bootstrap";
 import PlayerHomeCommand from "./playercommand/PlayerHomeCommand";
 import PlayerSetCommand from "./playercommand/PlayerSetCommand";
 import PlayerDeleteCommand from "./playercommand/PlayerDeleteCommand";
@@ -17,47 +17,56 @@ export const Command = React.createClass({
     },
     render() {
         return (<div>{this.state.overlay}<Grid><Row className="show-grid">
-            <Col md={6}><Panel header="Player Commands"><PanelGroup>
+            <Col md={6}><Panel header="Player Commands" bsStyle="info">
 
-                <Panel header="Home Command" bsStyle="info" onClick={() => {
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerHomeCommand command={this}/>});
-                }}/>
-                <Panel header="Set Command" bsStyle="info" onClick={() => {
+                }}>Home Command</Button>
+
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerSetCommand command={this}/>});
-                }}/>
-                <Panel header="Delete Command" bsStyle="info" onClick={() => {
+                }}>Set Command</Button>
+
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerDeleteCommand command={this}/>});
-                }}/>
-                <Panel header="List Command" bsStyle="info" onClick={() => {
+                }}>Delete Command</Button>
+
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerListCommand command={this}/>});
-                }}/>
-                <Panel header="Private Command" bsStyle="info" onClick={() => {
+                }}>List Command</Button>
+
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerPrivateCommand command={this}/>});
-                }}/>
-                <Panel header="Invite Command" bsStyle="info" onClick={() => {
+                }}>Private Command</Button>
+
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerInviteCommand command={this}/>});
-                }}/>
-                <Panel header="Help Command" bsStyle="info" onClick={() => {
+                }}>Invite Command</Button>
+
+                <Button bsStyle="info" block onClick={() => {
                     this.setState({overlay: <PlayerHelpCommand command={this}/>});
-                }}/>
-                <Panel header="Reload Command" bsStyle="info" onClick={() => {
+                }}>Help Command</Button>
 
-                }}/>
+                <Button bsStyle="info" block onClick={() => {
 
-            </PanelGroup></Panel></Col>
-            <Col md={6}><Panel header="Console Commands"><PanelGroup>
+                }}>Reload Command</Button>
 
-                <Panel header="List Command" bsStyle="success" onClick={() => {
+            </Panel></Col>
+            <Col md={6}><Panel header="Console Commands" bsStyle="success">
 
-                }}/>
-                <Panel header="Help Command" bsStyle="success" onClick={() => {
+                <Button bsStyle="success" block onClick={() => {
 
-                }}/>
-                <Panel header="Reload Command" bsStyle="success" onClick={() => {
+                }}>List Command</Button>
 
-                }}/>
+                <Button bsStyle="success" block onClick={() => {
 
-            </PanelGroup></Panel></Col>
+                }}>Help Command</Button>
+
+                <Button bsStyle="success" block onClick={() => {
+
+                }}>Reload Command</Button>
+
+            </Panel></Col>
         </Row></Grid></div>);
     }
 });

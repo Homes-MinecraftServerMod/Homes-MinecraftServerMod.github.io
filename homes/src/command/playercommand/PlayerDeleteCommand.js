@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Panel, Accordion, Well, Grid, Row, Col, ListGroup, ListGroupItem} from "react-bootstrap";
+import {Modal, Panel, Accordion, Well, ListGroup, ListGroupItem} from "react-bootstrap";
 
 export const PlayerDeleteCommand = React.createClass({
     getInitialState() {
@@ -22,45 +22,33 @@ export const PlayerDeleteCommand = React.createClass({
                     <p>You can delete your home.</p>
                     <Accordion>
 
-                        <Panel header="/home delete" eventKey="1" bsStyle="success"><Grid>
-                            <Row className="show-grid"><Col md={12}><p>
-                                You can delete your default home.<br/>
-                            </p></Col></Row>
-                            <Row className="show-grid">
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Permission" bsStyle="info"/>
-                                        <ListGroupItem>homes.command.delete</ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Configuration" bsStyle="info"/>
-                                    </ListGroup>
-                                </Col>
-                            </Row>
-                        </Grid></Panel>
+                        <Panel header="/home delete" eventKey="1" bsStyle="success">
+                            <p>
+                                You can delete your default home.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.delete</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                            </ListGroup>
+                        </Panel>
 
-                        <Panel header="/home delete <home_name>" eventKey="2" bsStyle="success"><Grid>
-                            <Row className="show-grid"><Col md={12}><p>
+                        <Panel header="/home delete <home_name>" eventKey="2" bsStyle="success">
+                            <p>
                                 You can delete your named home.<br/>
-                            </p></Col></Row>
-                            <Row className="show-grid">
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Permission" bsStyle="info"/>
-                                        <ListGroupItem>homes.command.delete</ListGroupItem>
-                                        <ListGroupItem>homes.command.delete.name</ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                                <Col sm={4}>
-                                    <ListGroup>
-                                        <ListGroupItem header="Configuration" bsStyle="info"/>
-                                        <ListGroupItem>Allow using named home</ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                            </Row>
-                        </Grid></Panel>
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.delete</ListGroupItem>
+                                <ListGroupItem>homes.command.delete.name</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow using named home</ListGroupItem>
+                            </ListGroup>
+                        </Panel>
                     </Accordion>
 
                     <Panel header="Examples" bsStyle="warning">

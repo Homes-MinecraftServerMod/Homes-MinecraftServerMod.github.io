@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Panel, Accordion, Well, Grid, Row, Col, ListGroup, ListGroupItem} from "react-bootstrap";
+import {Modal, Panel, Accordion, Well, ListGroup, ListGroupItem} from "react-bootstrap";
 
 export const PlayerListCommand = React.createClass({
     getInitialState() {
@@ -22,41 +22,33 @@ export const PlayerListCommand = React.createClass({
                     <p>You can display the list of your homes.</p>
                     <Accordion>
 
-                        <Panel header="/home list" eventKey="1" bsStyle="success"><Grid>
-                            <Row className="show-grid"><Col md={12}><p>
-                                You can display the list of your homes.<br/>
-                            </p></Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Permission" bsStyle="info"/>
-                                    <ListGroupItem>homes.command.list</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Configuration" bsStyle="info"/>
-                                </ListGroup>
-                            </Col></Row>
-                        </Grid></Panel>
+                        <Panel header="/home list" eventKey="1" bsStyle="success">
+                            <p>
+                                You can display the list of your homes.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.list</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                            </ListGroup>
+                        </Panel>
 
-                        <Panel header="/home list <player_name>" eventKey="2" bsStyle="success"><Grid>
-                            <Row className="show-grid"><Col md={12}><p>
-                                You can display the list of player's homes.<br/>
-                            </p></Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Permission" bsStyle="info"/>
-                                    <ListGroupItem>homes.command.list</ListGroupItem>
-                                    <ListGroupItem>homes.command.list.player</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                            <Row className="show-grid"><Col sm={5}>
-                                <ListGroup>
-                                    <ListGroupItem header="Configuration" bsStyle="info"/>
-                                    <ListGroupItem>Allow using player home</ListGroupItem>
-                                </ListGroup>
-                            </Col></Row>
-                        </Grid></Panel>
+                        <Panel header="/home list <player_name>" eventKey="2" bsStyle="success">
+                            <p>
+                                You can display the list of player's homes.
+                            </p>
+                            <ListGroup>
+                                <ListGroupItem header="Permission" bsStyle="info"/>
+                                <ListGroupItem>homes.command.list</ListGroupItem>
+                                <ListGroupItem>homes.command.list.player</ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem header="Configuration" bsStyle="info"/>
+                                <ListGroupItem>Allow using player home</ListGroupItem>
+                            </ListGroup>
+                        </Panel>
                     </Accordion>
 
                     <Panel header="Examples" bsStyle="warning">

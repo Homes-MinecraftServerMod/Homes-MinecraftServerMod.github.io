@@ -6,6 +6,7 @@ import PlayerDeleteCommand from "./playercommand/PlayerDeleteCommand";
 import PlayerListCommand from "./playercommand/PlayerListCommand";
 import PlayerPrivateCommand from "./playercommand/PlayerPrivateCommand";
 import PlayerInviteCommand from "./playercommand/PlayerInviteCommand";
+import PlayerHelpCommand from "./playercommand/PlayerHelpCommand";
 
 export const Command = React.createClass({
     getInitialState() {
@@ -37,7 +38,7 @@ export const Command = React.createClass({
                     this.setState({overlay: <PlayerInviteCommand command={this}/>});
                 }}/>
                 <Panel header="Help Command" bsStyle="info" onClick={() => {
-
+                    this.setState({overlay: <PlayerHelpCommand command={this}/>});
                 }}/>
                 <Panel header="Reload Command" bsStyle="info" onClick={() => {
 

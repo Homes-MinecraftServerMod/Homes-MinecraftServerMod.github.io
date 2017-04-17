@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Panel, Accordion, Well, Grid, Row, Col, ListGroup, ListGroupItem} from "react-bootstrap";
+import {Modal, Panel, Accordion, Well, ListGroup, ListGroupItem} from "react-bootstrap";
 
 export const PlayerPrivateCommand = React.createClass({
     getInitialState() {

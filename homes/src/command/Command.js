@@ -7,6 +7,7 @@ import PlayerListCommand from "./playercommand/PlayerListCommand";
 import PlayerPrivateCommand from "./playercommand/PlayerPrivateCommand";
 import PlayerInviteCommand from "./playercommand/PlayerInviteCommand";
 import PlayerHelpCommand from "./playercommand/PlayerHelpCommand";
+import PlayerReloadCommand from "./playercommand/PlayerReloadCommand";
 
 export const Command = React.createClass({
     getInitialState() {
@@ -48,7 +49,7 @@ export const Command = React.createClass({
                 }}>Help Command</Button>
 
                 <Button bsStyle="info" block onClick={() => {
-
+                    this.setState({overlay: <PlayerReloadCommand command={this}/>});
                 }}>Reload Command</Button>
 
             </Panel></Col>

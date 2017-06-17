@@ -2,3 +2,5 @@
 homes/\.idea/
 
 *.iml
+
+\.idea/workspace\.xml

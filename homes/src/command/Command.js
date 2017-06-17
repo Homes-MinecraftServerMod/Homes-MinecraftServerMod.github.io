@@ -8,6 +8,9 @@ import PlayerPrivateCommand from "./playercommand/PlayerPrivateCommand";
 import PlayerInviteCommand from "./playercommand/PlayerInviteCommand";
 import PlayerHelpCommand from "./playercommand/PlayerHelpCommand";
 import PlayerReloadCommand from "./playercommand/PlayerReloadCommand";
+import ConsoleListCommand from "./consolecommand/ConsoleListCommand";
+import ConsoleHelpCommand from "./consolecommand/ConsoleHelpCommand";
+import ConsoleReloadCommand from "./consolecommand/ConsoleReloadCommand";
 
 export const Command = React.createClass({
     getInitialState() {
@@ -56,15 +59,15 @@ export const Command = React.createClass({
             <Col md={6}><Panel header="Console Commands" bsStyle="success">
 
                 <Button bsStyle="success" block onClick={() => {
-
+                    this.setState({overlay: <ConsoleListCommand command={this}/>});
                 }}>List Command</Button>
 
                 <Button bsStyle="success" block onClick={() => {
-
+                    this.setState({overlay: <ConsoleHelpCommand command={this}/>});
                 }}>Help Command</Button>
 
                 <Button bsStyle="success" block onClick={() => {
-
+                    this.setState({overlay: <ConsoleReloadCommand command={this}/>});
                 }}>Reload Command</Button>
 
             </Panel></Col>
